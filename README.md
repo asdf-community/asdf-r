@@ -21,7 +21,7 @@ More details on environment variables setup for Mac OS builds can be found [here
 ## Install
 
 ```
-asdf plugin-add r https://github.com/asdf-community/asdf-r.git
+asdf plugin add r https://github.com/asdf-community/asdf-r.git
 ```
 
 ## ASDF options
