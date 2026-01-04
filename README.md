@@ -50,7 +50,9 @@ maybe you'll need Cairo as well:
 If you encounter X11-related errors during installation and don't need X11 support, you can skip it:
 
 ```bash
-R_EXTRA_CONFIGURE_OPTIONS='--enable-R-shlib --with-x=no' asdf install r <version>
+R_EXTRA_CONFIGURE_OPTIONS='--with-x=no' asdf install r <version>
+# or append it to the current installation
+R_EXTRA_CONFIGURE_OPTIONS='--enable-R-shlib --with-cairo --with-x=no' asdf install r <version>
 ```
 
 If you do need X11 support, install [XQuartz](https://www.xquartz.org/) first manually or by running:
