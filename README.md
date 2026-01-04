@@ -69,6 +69,9 @@ If installation fails with errors about missing libraries like `liblzma` or `pcr
 
 ```bash
 export CPPFLAGS="-I$(brew --prefix xz)/include -I$(brew --prefix pcre2)/include"
+# or if that doesn't work
+export CPPFLAGS="-I/opt/homebrew/include" LDFLAGS="-L/opt/homebrew/lib"
+
 asdf install r <version>
 ```
 
