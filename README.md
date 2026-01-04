@@ -20,7 +20,7 @@ More details on environment variables setup for Mac OS builds can be found [here
 
 ## Install
 
-```
+```bash
 asdf plugin add r https://github.com/asdf-community/asdf-r.git
 ```
 
@@ -37,11 +37,15 @@ When installing R using `asdf install`, you can pass custom configure options wi
 
 RStudio (and some other libs) requires building R shared library. In order to do that pass an extra configure option to `asdf install`:
 
-```R_EXTRA_CONFIGURE_OPTIONS=--enable-R-shlib asdf install r <version>```
+```bash
+R_EXTRA_CONFIGURE_OPTIONS=--enable-R-shlib asdf install r <version>
+```
 
 maybe you'll need Cairo as well:
 
-```R_EXTRA_CONFIGURE_OPTIONS='--enable-R-shlib --with-cairo' asdf install r <version>```
+```bash
+R_EXTRA_CONFIGURE_OPTIONS='--enable-R-shlib --with-cairo' asdf install r <version>
+```
 
 ## Troubleshooting
 
@@ -51,8 +55,6 @@ If you encounter X11-related errors during installation and don't need X11 suppo
 
 ```bash
 R_EXTRA_CONFIGURE_OPTIONS='--with-x=no' asdf install r <version>
-# or append it to the current installation
-R_EXTRA_CONFIGURE_OPTIONS='--enable-R-shlib --with-cairo --with-x=no' asdf install r <version>
 ```
 
 If you do need X11 support, install [XQuartz](https://www.xquartz.org/) first manually or by running:
